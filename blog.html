@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="blog.css" />
+</head>
+<body>
+    
+    
+      <div class="navbar-container">
+        <div class="logo">
+          <img src="profile1.jpg" alt="Profile Picture" />
+          Cabrales
+        </div>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="service.html">Services</a>
+          <a href="blog.html" class="active">Blog</a>
+        </nav>
+        <button class="connect-btn">Let’s Connect</button>
+      </div>
+    
+      <main class="blog-wrapper">
+      <section class="blog-box">
+        <div class="tabs">
+          <a href="#" class="active" onclick="filterPosts(event, 'all')">All Posts</a>
+          <a href="#" onclick="filterPosts(event, 'web')">Web</a>
+          <a href="#" onclick="filterPosts(event, 'graphics')">Graphics</a>
+          <a href="#" onclick="filterPosts(event, 'videos')">Videos</a>
+          <a href="#" onclick="filterPosts(event, '3d')">3D</a>
+        </div>
+    
+        <div class="card-container" id="posts">
+            
+          <div class="post-card" data-category="web">
+            <div class="thumbnail">Empty Image</div>
+            <div class="post-content">
+              <div class="meta">-</div>
+              <h3>Web Template Coming Soon</h3>
+              <p>This section is currently empty. Stay tuned for updates.</p>
+            </div>
+          </div>
+    
+          <div class="post-card" data-category="web">
+            <div class="thumbnail">Empty Image</div>
+            <div class="post-content">
+              <div class="meta">Jan 29 · 2 min read</div>
+              <h3>Web Template Coming Soon</h3>
+              <p>This section is currently empty. Stay tuned for updates.</p>
+            </div>
+          </div>
+    
+          <div class="post-card" data-category="graphics">
+            <div class="thumbnail">Empty Image</div>
+            <div class="post-content">
+              <div class="meta">—</div>
+              <h3>Graphic Template Coming Soon</h3>
+              <p>This section is currently empty. Stay tuned for updates.</p>
+            </div>
+          </div>
+    
+          <div class="post-card" data-category="videos">
+            <div class="thumbnail">Empty Image</div>
+            <div class="post-content">
+              <div class="meta">—</div>
+              <h3>Video Template Coming Soon</h3>
+              <p>This section is currently empty. Stay tuned for updates.</p>
+            </div>
+          </div>
+    
+          <div class="post-card" data-category="3d">
+            <div class="thumbnail">Empty Image</div>
+            <div class="post-content">
+              <div class="meta">—</div>
+              <h3>3D Template Coming Soon</h3>
+              <p>This section is currently empty. Stay tuned for updates.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+      <script>
+        function filterPosts(event, category) {
+          event.preventDefault();
+          document.querySelectorAll('.tabs a').forEach(tab => tab.classList.remove('active'));
+          event.target.classList.add('active');
+    
+          document.querySelectorAll('.post-card').forEach(card => {
+            card.style.display = (category === 'all' || card.dataset.category === category) ? 'flex' : 'none';
+          });
+        }
+      </script>
+
+      <footer class="footer">
+        <div class="footer-container">
+          <hr class="footer-line" />
+          <div class="footer-columns">
+            <div class="footer-column">
+              <h4>Navigation</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h4>Portfolio</h4>
+              <ul>
+                <li><a href="#">Websites</a></li>
+                <li><a href="#">Graphics</a></li>
+                <li><a href="#">Videos</a></li>
+                <li><a href="#">3D</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h4>Contact</h4>
+              <ul>
+                <li><a href="mailto:your.email@example.com">kencabrales4@gmail.com</a></li>
+                <li><a href="https://yourwebsite.com" target="_blank">mywebsite.com</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr class="footer-line" />
+          <p class="footer-copy">© 2025 Ken Ashley Cabrales. All rights reserved.</p>
+        </div>
+      </footer>
+</body>
+</html>
