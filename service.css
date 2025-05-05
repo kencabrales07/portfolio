@@ -6,7 +6,7 @@
 }
 
 body {
-    background: radial-gradient(circle at top, #000814 20%, #000000 100%);
+    background:url("keyboardbackground.avif");
     color: white;
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
@@ -118,7 +118,7 @@ nav a:hover::after {
 
 /* Services Section */
 .services-section {
-    min-height: 100vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -154,7 +154,7 @@ nav a:hover::after {
 }
 
 .service-card {
-    transform: translateY(-120px);
+    transform: translateY(20px);
     background-color: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
