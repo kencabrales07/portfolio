@@ -170,7 +170,7 @@ body {
     overflow: hidden; /* Prevents any overflow of images */
   }
   
-  /* Shaking animations with different directions */
+
   @keyframes shake-left {
     0%, 100% { transform: translateX(0); }
     25% { transform: translateX(-10px); }
@@ -229,3 +229,17 @@ body {
     height: calc(100vh / 3.8);
   }
   
+  .reuse-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .reuse-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+  }

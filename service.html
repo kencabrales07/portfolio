@@ -1,116 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="service.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <title>Service</title>
-    
 </head>
 <body>
 
     <div class="navbar-container">
         <div class="logo">
-          <img src="profile1.jpg" alt="Profile Picture" />
-          Cabrales
+            <img src="profile1.jpg" alt="Profile Picture" />
+            Cabrales
         </div>
         <nav>
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="service.html">Services</a>
-          <a href="blog.html">Blog</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="service.html">Services</a>
+            <a href="blog.html">Blog</a>
         </nav>
-        <button class="connect-btn">Let’s Connect</button>
-      </div>
+        <button class="connect-btn" onclick="window.location.href='connect.html'">Let’s Connect</button>
+    </div>
+    <section class="card-container">
+        <h1 class="tech-stack-title">Tech Stack</h1>
+      <!-- Frontend Card -->
+      <div class="card">
+        <h3>Frontend</h3>
+        <div class="carousel">
+          <div class="track">
+            <img src="icon_html.png" alt="HTML" />
+            <img src="icon_css.png" alt="CSS" />
+            <img src="icon_js.png" alt="JavaScript" />
+            <img src="icons/react.png" alt="React" />
     
-
-      <section class="services-section">
-        <div class="services-bg-text">SERVICES</div>
-      
-        <div class="services-grid">
-          <div class="service-card">
-            <h3>Website Design</h3>
-            <ul>
-              <li><i class="fa-solid fa-window-maximize"></i> Landing Pages</li>
-              <li><i class="fa-solid fa-cart-shopping"></i> E-commerce</li>
-              <li><i class="fa-solid fa-folder-open"></i> Portfolio</li>
-              <li><i class="fa-solid fa-pen-nib"></i> Blogs</li>
-              <li><i class="fa-solid fa-building"></i> Corporate Websites</li>
-              <li><i class="fa-solid fa-desktop"></i> UI/UX Design</li>
-              <li><i class="fa-solid fa-tablet-screen-button"></i> Responsive Design</li>
-            </ul>
-          </div>
-      
-          <div class="service-card">
-            <h3>Graphic Design</h3>
-            <ul>
-              <li><i class="fa-solid fa-image"></i> Posters</li>
-              <li><i class="fa-solid fa-flag"></i> Banners</li>
-              <li><i class="fa-solid fa-file-pdf"></i> Brochure & Flyers</li>
-              <li><i class="fa-solid fa-pen"></i> Post Design</li>
-              <li><i class="fa-solid fa-shapes"></i> Logo Designs</li>
-              <li><i class="fa-solid fa-box"></i> Packaging Designs</li>
-              <li><i class="fa-solid fa-id-card"></i> Business Cards</li>
-            </ul>
-          </div>
-      
-          <div class="service-card">
-            <h3>Video Editing</h3>
-            <ul>
-              <li><i class="fa-solid fa-bullhorn"></i> Promotional Videos</li>
-              <li><i class="fa-solid fa-clapperboard"></i> Social Media Clips</li>
-              <li><i class="fa-solid fa-box-open"></i> Product Demos</li>
-              <li><i class="fa-solid fa-calendar-days"></i> Event Videos</li>
-            </ul>
-          </div>
-      
-          <div class="service-card">
-            <h3>3D Modeling</h3>
-            <ul>
-              <li><i class="fa-solid fa-cube"></i> Product Design</li>
-              <li><i class="fa-solid fa-vial"></i> Product Visualization</li>
-              <li><i class="fa-solid fa-house"></i> Interior & Exterior Designs</li>
-              <li><i class="fa-solid fa-wand-magic-sparkles"></i> Motion Graphics</li>
-            </ul>
+            <img src="icon_html.png" alt="HTML" />
+            <img src="icon_css.png" alt="CSS" />
+            <img src="icon_js.png" alt="JavaScript" />
+            <img src="icons/react.png" alt="React" />
           </div>
         </div>
+      </div>
+    
+      <!-- Backend Card -->
+      <div class="card">
+        <h3>Backend</h3>
+        <div class="carousel">
+          <div class="track">
+            <img src="icon_java.png" alt="Java" />
+            <img src="icon_cold.png" alt="C" />
+            <img src="icon_c++.png" alt="C++" />
+            <img src="icon_csharp.png" alt="C#" />
+            
+            <img src="icon_java.png" alt="Java" />
+            <img src="icon_cold.png" alt="C" />
+            <img src="icon_c++.png" alt="C++" />
+            <img src="icon_csharp.png" alt="C#" />
+          </div>
+        </div>
+      </div>
+    
+      <!-- Database Card -->
+      <div class="card">
+        <h3>Database</h3>
+        <div class="carousel">
+          <div class="track">
+            <img src="icon_mysql.png" alt="MySQL" />
+            <img src="icon_sql.png" alt="SQLite" />
+            <img src="icon_oracle.png" alt="Oracle" />
+            <img src="icon_firebase.png" alt="Firebase" />
+          
+            <img src="icons/mysql.png" alt="MySQL" />
+            <img src="icons/mongodb.png" alt="MongoDB" />
+            <img src="icons/postgresql.png" alt="PostgreSQL" />
+            <img src="icons/firebase.png" alt="Firebase" />
+          </div>
+        </div>
+      </div>
+    
+      <!-- Mobile App Card -->
+      <div class="card">
+        <h3>Mobile App</h3>
+        <div class="carousel">
+          <div class="track">
+            <img src="icons/flutter.png" alt="Flutter" />
+            <img src="icons/reactnative.png" alt="React Native" />
+            <img src="icons/kotlin.png" alt="Kotlin" />
+            <img src="icons/android.png" alt="Android" />
+            
+            <img src="icons/flutter.png" alt="Flutter" />
+            <img src="icons/reactnative.png" alt="React Native" />
+            <img src="icons/kotlin.png" alt="Kotlin" />
+            <img src="icons/android.png" alt="Android" />
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
 
-        <section class="skills-section">
-            <div class="skills-title">Skills</div>
-            <div class="carousel-container">
-              <div class="skills-carousel">
-                <div class="skills-track">
+    <section class="services-section">
+        <div class="services-bg-text">SERVICES</div>
 
-                    <i><img src="icon_html.png"></i>
-                    <i><img src="icon_css.png"></i>
-                    <i><img src="icon_js.png"></i>
-                    <i><img src="icon_csharp.png"></i>
-                    <i><img src="icon_cold.png"></i>
-                    <i><img src="icon_java.png"></i>
-                    <i><img src="icon_sql.png"></i>
-
-                    
-                    <i><img src="icon_html.png"></i>
-                    <i><img src="icon_css.png"></i>
-                    <i><img src="icon_js.png"></i>
-                    <i><img src="icon_csharp.png"></i>
-                    <i><img src="icon_cold.png"></i>
-                    <i><img src="icon_java.png"></i>
-                    <i><img src="icon_sql.png"></i>
-
-
-                </div>
-              </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Website Design</h3>
+                <ul>
+                    <li><i class="fa-solid fa-window-maximize"></i> Landing Pages</li>
+                    <li><i class="fa-solid fa-cart-shopping"></i> E-commerce</li>
+                    <li><i class="fa-solid fa-folder-open"></i> Portfolio</li>
+                    <li><i class="fa-solid fa-pen-nib"></i> Blogs</li>
+                    <li><i class="fa-solid fa-building"></i> Corporate Websites</li>
+                    <li><i class="fa-solid fa-desktop"></i> UI/UX Design</li>
+                    <li><i class="fa-solid fa-tablet-screen-button"></i> Responsive Design</li>
+                </ul>
             </div>
-          </section>
-      </section>
 
+            <div class="service-card">
+                <h3>Graphic Design</h3>
+                <ul>
+                    <li><i class="fa-solid fa-image"></i> Posters</li>
+                    <li><i class="fa-solid fa-flag"></i> Banners</li>
+                    <li><i class="fa-solid fa-file-pdf"></i> Brochure & Flyers</li>
+                    <li><i class="fa-solid fa-pen"></i> Post Design</li>
+                    <li><i class="fa-solid fa-shapes"></i> Logo Designs</li>
+                    <li><i class="fa-solid fa-id-card"></i> Business Cards</li>
+                </ul>
+            </div>
 
-
-      
-
-      
-
+            <div class="service-card">
+                <h3>Video Editing</h3>
+                <ul>
+                    <li><i class="fa-solid fa-bullhorn"></i> Promotional Videos</li>
+                    <li><i class="fa-solid fa-clapperboard"></i> Social Media Clips</li>
+                    <li><i class="fa-solid fa-box-open"></i> Product Demos</li>
+                    <li><i class="fa-solid fa-calendar-days"></i> Event Videos</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

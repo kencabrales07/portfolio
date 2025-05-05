@@ -1,3 +1,4 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +9,7 @@ body {
     background: radial-gradient(circle at top, #000814 20%, #000000 100%);
     color: white;
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
 /* Navbar */
@@ -29,6 +31,7 @@ body {
     transform: translateX(-50%);
     z-index: 100;
     flex-wrap: wrap;
+    width: fit-content;
 }
 
 .logo {
@@ -57,13 +60,12 @@ nav a {
     text-decoration: none;
     font-size: 0.95rem;
     position: relative;
+    transition: color 0.3s;
 }
 
 nav a:hover {
     color: white;
 }
-
-
 
 nav a::after {
     content: '';
@@ -72,6 +74,10 @@ nav a::after {
     bottom: -5px;
     width: 100%;
     height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
 }
 
 nav a:hover::after {
@@ -88,6 +94,7 @@ nav a:hover::after {
     cursor: pointer;
     animation: tilt-pause 14s infinite;
     transform-origin: center center;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
 @keyframes tilt-pause {
@@ -111,24 +118,28 @@ nav a:hover::after {
 
 /* Services Section */
 .services-section {
-    background-color: #000;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 2rem;
+    margin-top: 0;
+    position: relative;
+    overflow: hidden;
 }
 
 .services-bg-text {
     position: absolute;
-    top: 32%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 14vw;
     font-weight: 700;
-    opacity: 0.1;
+    opacity: 0.08;
     white-space: nowrap;
     z-index: 0;
     color: white;
+    pointer-events: none;
 }
 
 .services-grid {
@@ -140,15 +151,16 @@ nav a:hover::after {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    margin-top: 12%;
 }
 
 .service-card {
+    transform: translateY(-120px);
     background-color: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
     padding: 1.5rem;
     transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
 }
 
 .service-card:hover {
@@ -182,80 +194,77 @@ nav a:hover::after {
     width: 20px;
 }
 
-/* Skills Section Carousel */
-.skills-section {
+/* Carousel Cards */
+.tech-stack-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.card-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 60px 20px;
-    margin-top: 80px;
+    gap: 20px;
+    padding: 100px 20px 40px;
+    backdrop-filter: blur(10px);
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+    width: 250px;
     text-align: center;
 }
 
-.skills-title {
-    position: absolute;
-    font-size: 2rem;
-    margin-bottom: 10px;
-    font-weight: bold;
-    z-index: 2;
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    color: white;
 }
 
-
-
-.carousel-container {
-    width: 100%;
+.carousel {
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-}
-
-.skills-carousel {
     width: 100%;
-    max-width: 800px;
-    overflow: hidden;
+    height: 60px;
+    position: relative;
+    
 }
 
-.skills-track {
+.track {
     display: flex;
-    gap: 40px;
-    animation: scroll 20s linear infinite;
-    font-size: 2.5rem;
-    color: #FFF;
-    opacity: 0.2;
+    gap: 24px;
+    animation: scroll 25s linear infinite;
 }
 
-.skills-track i img{
-    width: 50px;
-    height: 50px;
+.track img {
+    width: 40px;
+    height: 40px;
     object-fit: contain;
-    display: block;
+    filter: grayscale(0.5);
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.skills-track:hover {
-  opacity: 1;
+.track img:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
 }
-
-
-
 
 @keyframes scroll {
-    0% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
+/* Responsive */
 @media (max-width: 1024px) {
     .services-grid {
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
-    }
-
-    .skills-carousel .skills-track i {
-        font-size: 2rem;
     }
 
     .services-bg-text {
@@ -317,20 +326,13 @@ nav a:hover::after {
         height: 30px;
     }
 
-    .skills-carousel .skills-track {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 80px 20px;
+    }
+
+    .track {
         animation-duration: 40s;
     }
-
-    .skills-carousel .skills-track i {
-        font-size: 1.3rem;
-        margin: 0 8px;
-    }
-
-    .skills-title {
-        font-size: 1.5rem;
-    }
 }
-
-/** Test icons **/
-
-

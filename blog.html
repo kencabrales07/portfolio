@@ -19,9 +19,9 @@
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="service.html">Services</a>
-          <a href="blog.html" class="active">Blog</a>
+          <a href="blog.html">Blog</a>
         </nav>
-        <button class="connect-btn">Let’s Connect</button>
+        <button class="connect-btn" onclick="window.location.href='connect.html'">Let’s Connect</button>
       </div>
     
       <main class="blog-wrapper">
@@ -31,55 +31,54 @@
           <a href="#" onclick="filterPosts(event, 'web')">Web</a>
           <a href="#" onclick="filterPosts(event, 'graphics')">Graphics</a>
           <a href="#" onclick="filterPosts(event, 'videos')">Videos</a>
-          <a href="#" onclick="filterPosts(event, '3d')">3D</a>
+
         </div>
     
         <div class="card-container" id="posts">
             
           <div class="post-card" data-category="web">
-            <div class="thumbnail">Empty Image</div>
+            <div class="thumbnail"></div>
             <div class="post-content">
               <div class="meta">-</div>
               <h3>Web Template Coming Soon</h3>
               <p>This section is currently empty. Stay tuned for updates.</p>
             </div>
           </div>
-    
-          <div class="post-card" data-category="web">
-            <div class="thumbnail">Empty Image</div>
+
+          <div class="post-card" data-category="graphics">
+            <div class="thumbnail"><img src="offroad_thumbnail.PNG" alt=""></div>
             <div class="post-content">
-              <div class="meta">Jan 29 · 2 min read</div>
-              <h3>Web Template Coming Soon</h3>
-              <p>This section is currently empty. Stay tuned for updates.</p>
+              <div class="meta">Posters</div>
+              <h3>Offroad Poster</h3>
+              <p>LN46 4X4 Event Poster Magazine</p>
             </div>
           </div>
+    
     
           <div class="post-card" data-category="graphics">
-            <div class="thumbnail">Empty Image</div>
+            <div class="thumbnail"><img src="wanted_thumbnail.PNG" alt=""></div>
             <div class="post-content">
-              <div class="meta">—</div>
-              <h3>Graphic Template Coming Soon</h3>
-              <p>This section is currently empty. Stay tuned for updates.</p>
+              <div class="meta">Posters</div>
+              <h3>Wanted Poster</h3>
+              <p>Detailed information about wanted person</p>
             </div>
           </div>
     
-          <div class="post-card" data-category="videos">
-            <div class="thumbnail">Empty Image</div>
-            <div class="post-content">
-              <div class="meta">—</div>
-              <h3>Video Template Coming Soon</h3>
-              <p>This section is currently empty. Stay tuned for updates.</p>
+          <a href="https://www.youtube.com/watch?v=tJv9JWk3nnM" target="_blank" rel="noopener noreferrer">
+            <div class="post-card" data-category="videos">
+              <div class="thumbnail">
+                <img src="https://img.youtube.com/vi/tJv9JWk3nnM/maxresdefault.jpg" alt="Offroad Enthusiast Thumbnail" />
+              </div>
+              <div class="post-content">
+                <div class="meta">Promotional Video</div>
+                <h3>Offroad Enthusiast</h3>
+                <p>Mitsubishi Adventure Offroad Enthusiast (Putik Offroad)</p>
+              </div>
             </div>
-          </div>
+          </a>
+          
     
-          <div class="post-card" data-category="3d">
-            <div class="thumbnail">Empty Image</div>
-            <div class="post-content">
-              <div class="meta">—</div>
-              <h3>3D Template Coming Soon</h3>
-              <p>This section is currently empty. Stay tuned for updates.</p>
-            </div>
-          </div>
+          
         </div>
       </section>
     </main>
@@ -115,7 +114,6 @@
                 <li><a href="#">Websites</a></li>
                 <li><a href="#">Graphics</a></li>
                 <li><a href="#">Videos</a></li>
-                <li><a href="#">3D</a></li>
               </ul>
             </div>
             <div class="footer-column">

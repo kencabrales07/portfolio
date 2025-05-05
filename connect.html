@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connect Form</title>
+  <link rel="stylesheet" href="connect.css" />
+</head>
+<body>
+
+  <div class="navbar-container">
+    <div class="logo">
+      <img src="profile1.jpg" alt="Profile Picture" />
+      Cabrales
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="techstack.html">Tech Stack</a>
+      <a href="service.html">Services</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+    <button class="connect-btn" onclick="window.location.href='connect.html'">Let’s Connect</button>
+  </div>
+  <div class="container">
+    <div class="form-card">
+      <h2>Connect with me</h2>
+      <form>
+        <div class="row">
+          <input type="text" placeholder="First name" required>
+          <input type="text" placeholder="Last name">
+        </div>
+        <div class="row">
+          <input type="email" placeholder="Email" required>
+          <div class="phone-input">
+            <span class="globe">🌐</span>
+            <input type="text" placeholder="Phone">
+          </div>
+        </div>
+
+        <p class="requirement-label">Your Requirement</p>
+        <div class="requirements">
+          <button type="button">Website</button>
+          <button type="button">Graphics</button>
+          <button type="button">Video</button>
+          <button type="button">3D</button>
+        </div>
+
+        <textarea placeholder="Feel free to outline your ideas or needs..."></textarea>
+
+        <button class="submit-btn" type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="right-panel">
+        
+    </div>
+  </div>
+
+  <script>
+    const requirementButtons = document.querySelectorAll('.requirements button');
+  
+    requirementButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        button.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>

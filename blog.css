@@ -110,6 +110,8 @@ nav a:hover::after {
     transform: rotate(0deg) translateY(0); 
 }
 
+/* Containers */
+
   
 
   .blog-wrapper {
@@ -119,7 +121,10 @@ nav a:hover::after {
   }
 
   .blog-box {
-    border-color: #000;
+    backdrop-filter:blur(10px);
+    background-color:rgba(0,0,0,0.1);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: 3px solid rgba(0,0,0,0.4);
     border-width: 2.5px;
     border-style: solid;
     position: relative;
@@ -129,7 +134,6 @@ nav a:hover::after {
     max-height: 720px;
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
     margin: 0;
   }
 
@@ -188,7 +192,6 @@ nav a:hover::after {
   .thumbnail {
     width: 100%;
     height: 150px;
-    background-color: #333;
     border-radius: 10px;
     margin-bottom: 15px;
     display: flex;
@@ -302,3 +305,16 @@ nav a:hover::after {
     text-align: center;
   }
 
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  
