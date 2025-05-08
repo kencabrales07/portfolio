@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <title>About - Cabrales</title>
+  <script src="https://kit.fontawesome.com/5d72166fb5.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="about.css" />
 </head>
 <body>
@@ -13,6 +14,10 @@
       <img src="profile1.jpg" alt="Profile Picture" />
       Cabrales
     </div>
+<button class="hamburger" id="hamburger">
+<i class="fas fa-bars"></i>
+</button>
+
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -55,17 +60,24 @@
       <p class="section-label">About Me</p>
       <h1 class="greeting">Hi There!</h1>
       <p class="intro">
-        I’m <span class="highlight">Ken Ashley Cabrales</span>, a UX enthusiast with strong critical thinking skills and a sharp eye for design and program details. While I don't come from a traditional graphic design background, I've developed a solid understanding of design concepts and user experience through self-study, hands-on practice, and passion-driven experimentation. I love analyzing how people interact with interfaces and finding ways to make digital experiences more seamless and enjoyable. Outside of tech, I value creativity, collaboration, and staying curious about how things work.
+        I am <span class="highlight">Ken Ashley Cabrales</span>, I aspire to become a full-stack developer and UX designer, focused on building impactful, user-centric applications that solve real problems.
       </p>
       <p class="intro">
-        My professional aspiration is to become a full-stack developer and UX designer who builds meaningful, user-centered applications that solve real problems. I’m constantly improving my skills in both front-end and back-end technologies while embracing design systems and accessibility best practices. I aim to work on projects that push boundaries and deliver impact—whether in startups or larger tech teams—where I can grow, contribute, and continue learning from industry leaders.
+        With a strong passion for design and continuous learning, I aim to create seamless digital experiences that truly make a difference.
       </p>
       <div class="about-links">
         <a href="#">Let’s Connect</a> | <a href="#">Blog</a>
       </div>
     </div>
   </section>
-
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.querySelector('.navbar-container nav');
+  
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>

@@ -6,23 +6,28 @@
   <title>Blog</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="blog.css" />
+  <script src="https://kit.fontawesome.com/5d72166fb5.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
     
-      <div class="navbar-container">
-        <div class="logo">
-          <img src="profile1.jpg" alt="Profile Picture" />
-          Cabrales
-        </div>
-        <nav>
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="service.html">Tech Stack</a>
-          <a href="blog.html">Blog</a>
-        </nav>
-        <button class="connect-btn" onclick="window.location.href='connect.html'">Let’s Connect</button>
-      </div>
+  <div class="navbar-container">
+    <div class="logo">
+      <img src="profile1.jpg" alt="Profile Picture" />
+      Cabrales
+    </div>
+<button class="hamburger" id="hamburger">
+<i class="fas fa-bars"></i>
+</button>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="service.html">Tech Stack</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+    <button class="connect-btn" onclick="window.location.href='connect.html'">Let’s Connect</button>
+  </div>
     
       <main class="blog-wrapper">
       <section class="blog-box">
@@ -130,7 +135,7 @@
             <div class="footer-column">
               <h4>Contact</h4>
               <ul>
-                <li><a href="mailto:your.email@example.com">kencabrales4@gmail.com</a></li>
+                <li><a href="kencabrales4@gmail.com">kencabrales4@gmail.com</a></li>
                 <li><a href="https://yourwebsite.com" target="_blank">mywebsite.com</a></li>
               </ul>
             </div>
@@ -139,5 +144,14 @@
           <p class="footer-copy">© 2025 Ken Ashley Cabrales. All rights reserved.</p>
         </div>
       </footer>
+
+      <script>
+        const hamburger = document.getElementById('hamburger');
+        const nav = document.querySelector('.navbar-container nav');
+      
+        hamburger.addEventListener('click', () => {
+          nav.classList.toggle('active');
+        });
+      </script>
 </body>
 </html>

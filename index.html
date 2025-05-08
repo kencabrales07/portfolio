@@ -16,6 +16,10 @@
           <img src="profile1.jpg" alt="Profile Picture" />
           Cabrales
         </div>
+<button class="hamburger" id="hamburger">
+  <i class="fas fa-bars"></i>
+</button>
+
         <nav>
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
@@ -49,6 +53,13 @@
         </div>
     </div>
 </div>
-
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.querySelector('.navbar-container nav');
+  
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>

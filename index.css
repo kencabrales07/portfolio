@@ -16,7 +16,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     color:var(--color);
-
+}
     .navbar-container {
         display: flex;
         align-items: center;
@@ -112,7 +112,154 @@ body{
         animation-play-state: paused; 
         transform: rotate(0deg) translateY(0); 
       }
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .services-bg-text {
+        font-size: 10vw;
+    }
+
+    .navbar-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 15px;
+    }
+
+    .connect-btn {
+        margin-top: 10px;
+    }
 }
+
+@media (max-width: 768px) {
+
+    .logo,
+.connect-btn {
+  display: none;
+}
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-bg-text {
+        font-size: 12vw;
+        top: 20%;
+    }
+
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+        border-radius: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    .connect-btn {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 1rem;
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 80px 20px;
+    }
+
+    .track {
+        animation-duration: 40s;
+    }
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+        order: 1;
+        z-index: 101;
+    }
+
+    .logo {
+        order: 2;
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        border-radius: 0 0 20px 20px;
+        z-index: 100;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        font-size: 1rem;
+        color: white;
+        padding: 10px;
+    }
+
+    .connect-btn {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
 .container{
     min-height:100vh;
     max-height:auto;

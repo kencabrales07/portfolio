@@ -1,0 +1,164 @@
+body {
+    background-color: black;
+    font-family: 'Futura Condensed PT', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.tech-item h1{
+
+    font-size: 10rem;
+}
+
+
+.tech-stack-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0.5;
+    transform: translateY(20%);
+    position: relative;
+}
+
+.tech-item {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.tech-stack-bg {
+    position: absolute;
+    bottom: 65%; 
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18rem; 
+    opacity: 0.1; 
+    white-space: nowrap;
+    letter-spacing: 5px;
+    z-index: -1; 
+}
+
+.tech-item h1 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.tech-item h1:hover {
+    opacity: 0.2;
+}
+
+.images {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    z-index: 0;
+}
+
+.images img {
+    margin: 10px;
+    width: 80px;
+    height: 80px;
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tech-item:hover .images {
+    display: flex;
+}
+
+.tech-item:hover .images img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/** Service Card */
+
+.services-section {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 2rem;
+    margin-top: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-bg-text {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14vw;
+    font-weight: 700;
+    opacity: 0.08;
+    white-space: nowrap;
+    z-index: 0;
+    color: white;
+    pointer-events: none;
+}
+
+.services-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.service-card {
+    transform: translateY(20px);
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.service-card:hover {
+    border-color: white;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.service-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.service-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-card li {
+    margin: 0.4rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.95rem;
+    color: #ddd;
+}
+
+.service-card i {
+    color: #aaa;
+    width: 20px;
+}

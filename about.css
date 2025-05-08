@@ -1,104 +1,255 @@
-/* Base Styles */
 body {
-    background-color: #000;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-  
-  /* Navbar */
-  .navbar-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    padding: 10px 25px;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 999px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 100;
-    color: white;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    font-size: 1.1rem;
-  }
-  
-  .logo img {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    margin-right: 8px;
-    border: 2px solid white;
-  }
-  
-  nav {
-    display: flex;
-    gap: 20px;
-  }
-  
-  nav a {
-    color: #929ca3;
-    text-decoration: none;
-    font-size: 0.95rem;
-    position: relative;
-  }
-  
-  nav a:hover {
-    color: white;
-  }
+  background-color: #000;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 
-  nav a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 100%;
-    height: 2px;
-  }
-  
-  nav a:hover::after {
-    transform: scaleX(1);
-  }
-  
-  /* Connect Button */
-  .connect-btn {
-    padding: 8px 16px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 999px;
-    background-color: rgba(255, 255, 255, 0.05);
+/* Navbar */
+ .navbar-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 10px 25px;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 999px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+        color: white;
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
+      }
+      
+      .logo {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+      
+      .logo img {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin-right: 8px;
+        border: 2px solid white;
+      }
+      
+      nav {
+        display: flex;
+        gap: 20px;
+      }
+      
+      nav a {
+        color: #929ca3;
+        text-decoration: none;
+        font-size: 0.95rem;
+        position: relative;
+      }
+      
+      nav a:hover {
+        color: white;
+      }
+      
+      
+      
+      nav a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 100%;
+        height: 2px;
+      }
+      
+      nav a:hover::after {
+        transform: scaleX(1);
+      }
+      
+      .connect-btn {
+        padding: 8px 16px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 999px;
+        background-color: rgba(255, 255, 255, 0.05);
+        color: white;
+        font-weight: 500;
+        cursor: pointer;
+        animation: tilt-pause 14s infinite; 
+        transform-origin: center center; 
+      }
+      
+      @keyframes tilt-pause {
+        0% { transform: rotate(0deg); }
+        10% { transform: rotate(-5deg) translateY(-1px); }
+        20% { transform: rotate(5deg) translateY(1px); }
+        30% { transform: rotate(-5deg) translateY(-1px); }
+        40% { transform: rotate(5deg) translateY(1px); }
+        50% { transform: rotate(-5deg) translateY(-1px); }
+        60% { transform: rotate(5deg) translateY(1px); }
+        100% { transform: rotate(0deg); } 
+      }
+      
+      .connect-btn:hover {
+        background-color: white;
+        color: #002d4d;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        animation-play-state: paused; 
+        transform: rotate(0deg) translateY(0); 
+      }
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .services-bg-text {
+        font-size: 10vw;
+    }
+
+    .navbar-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 15px;
+    }
+
+    .connect-btn {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .logo,
+.connect-btn {
+  display: none;
+}
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-bg-text {
+        font-size: 12vw;
+        top: 20%;
+    }
+
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+        border-radius: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    .connect-btn {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 1rem;
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 80px 20px;
+    }
+
+    .track {
+        animation-duration: 40s;
+    }
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
     color: white;
-    font-weight: 500;
     cursor: pointer;
-    animation: tilt-pause 14s infinite;
-    transform-origin: center center;
-  }
-  
-  @keyframes tilt-pause {
-    0% { transform: rotate(0deg); }
-    10%, 30%, 50% { transform: rotate(-5deg) translateY(-1px); }
-    20%, 40%, 60% { transform: rotate(5deg) translateY(1px); }
-    100% { transform: rotate(0deg); }
-  }
-  
-  .connect-btn:hover {
-    background-color: white;
-    color: #002d4d;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    animation-play-state: paused;
-    transform: rotate(0deg) translateY(0);
-  }
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+        order: 1;
+        z-index: 101;
+    }
+
+    .logo {
+        order: 2;
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        border-radius: 0 0 20px 20px;
+        z-index: 100;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        font-size: 1rem;
+        color: white;
+        padding: 10px;
+    }
+
+    .connect-btn {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
   
   /* Hero Section */
   .about-hero {
@@ -106,7 +257,7 @@ body {
     height: 100vh;
     padding-top: 150px;
     text-align: center;
-    max-width: 750px;
+    max-width: 600px;
     margin: 0 auto;
     z-index: 2;
   }
@@ -152,11 +303,11 @@ body {
   /* Image Grid Background */
   
   .image-grid-wrapper {
-    position: fixed;
+    position: absolute; /* was fixed */
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: auto;
     z-index: 0;
     display: flex;
     flex-direction: column;
@@ -165,10 +316,11 @@ body {
     opacity: 0.3;
     filter: blur(2px);
     pointer-events: none;
-    padding: 0 30px;
+    padding: 0 15px;
     box-sizing: border-box;
-    overflow: hidden; /* Prevents any overflow of images */
+    overflow: hidden;
   }
+  
   
 
   @keyframes shake-left {
@@ -191,12 +343,30 @@ body {
     50% { transform: translateX(5px); }
     75% { transform: translateX(-5px); }
   }
+
+  @media (max-width: 768px) {
+    .image-row img {
+      width: 70px;
+      height: 70px;
+    }
+  }
   
   .image-row {
-    display: grid;
-    gap: 20px;
-    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
   }
+  
+  
+  .image-row img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+  }
+  
   
   .top-row {
     grid-template-columns: repeat(5, 1fr);
