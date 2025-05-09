@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&family=Nunito+Sans:opsz,wght@6..12,300&display=swap');
+
+:root {
+    --color: #ddd;
+}
 * {
   margin: 0;
   padding: 0;
@@ -128,6 +133,23 @@ nav a:hover::after {
 
 /* Responsive */
 @media (max-width: 1024px) {
+
+  .container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.right-panel {
+  display: none;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 500px;
+}
+
   .services-grid {
       grid-template-columns: 1fr 1fr;
       gap: 1.5rem;
@@ -150,10 +172,31 @@ nav a:hover::after {
 
 @media (max-width: 768px) {
 
-  .logo,
+  .logo img{
+    display: none;
+  }
+
+  .container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.right-panel {
+  display: none;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 500px;
+}
+
+
 .connect-btn {
 display: none;
 }
+
 
   .services-grid {
       grid-template-columns: 1fr;
@@ -168,7 +211,6 @@ display: none;
       flex-direction: column;
       align-items: center;
       gap: 15px;
-      padding: 15px;
       border-radius: 20px;
   }
 
@@ -219,58 +261,97 @@ display: none;
 }
 
 @media (max-width: 768px) {
-  .navbar-container {
-      flex-wrap: nowrap;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 20px;
-      position: relative;
+  
+.logo img{
+    display: none;
   }
 
+  .container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.right-panel {
+  display: none;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 500px;
+}
+
+
+  .navbar-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  transform: none;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+}
+
+
+
+
+
+
+
   .hamburger {
-      display: block;
-      order: 1;
-      z-index: 101;
+    display: block;
+    font-size: 1.5rem;
+    order: 2; 
+    z-index: 101;
   }
 
   .logo {
-      order: 2;
-      display: flex;
-      align-items: center;
-      font-size: 1rem;
+    order: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+    flex: 1;
+  }
+
+  .logo img {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
   }
 
   nav {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: rgba(0, 0, 0, 0.7);
-      flex-direction: column;
-      align-items: center;
-      padding: 20px 0;
-      border-radius: 0 0 20px 20px;
-      z-index: 100;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    border-radius: 0 0 15px 15px;
+    z-index: 100;
   }
 
   nav.active {
-      display: flex;
+    display: flex;
   }
 
   nav a {
-      font-size: 1rem;
-      color: white;
-      padding: 10px;
+    font-size: 1rem;
+    color: white;
+    padding: 10px;
   }
 
   .connect-btn {
-      width: 100%;
-      text-align: center;
-      margin-top: 10px;
+    display: none;
   }
 }
+
   
 
   /* Container*/

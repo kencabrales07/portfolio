@@ -11,12 +11,14 @@ body {
 }
 
 .tech-item h1{
-
+    position: absolute;
+    margin-top: 1010px;
     font-size: 10rem;
 }
 
 
 .tech-stack-container {
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,81 +86,3 @@ body {
     transform: scale(1.1);
 }
 
-/** Service Card */
-
-.services-section {
-    min-height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 2rem;
-    margin-top: 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.services-bg-text {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 14vw;
-    font-weight: 700;
-    opacity: 0.08;
-    white-space: nowrap;
-    z-index: 0;
-    color: white;
-    pointer-events: none;
-}
-
-.services-grid {
-    position: relative;
-    z-index: 2;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.service-card {
-    transform: translateY(20px);
-    background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-}
-
-.service-card:hover {
-    border-color: white;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-}
-
-.service-card h3 {
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-.service-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.service-card li {
-    margin: 0.4rem 0;
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    font-size: 0.95rem;
-    color: #ddd;
-}
-
-.service-card i {
-    color: #aaa;
-    width: 20px;
-}
