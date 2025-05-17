@@ -350,10 +350,23 @@ nav a:hover::after {
 
 .images img {
     margin-top: 20px;
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     opacity: 1;
     transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.image-item {
+    text-align: center;
+}
+
+.image-label {
+    display: block;
+    margin-top: 8px;
+    font-size: 1rem;
+    color: white;
+    opacity: 0.7;
+    text-transform: capitalize;
 }
 
 .tech-item:hover .images {
@@ -363,6 +376,10 @@ nav a:hover::after {
 .tech-item:hover .images img {
     opacity: 1;
     transform: scale(1.1);
+}
+
+.tech-item:hover .images .image-label {
+    opacity: 1;
 }
 
 /* Services Section */
@@ -544,6 +561,10 @@ nav a:hover::after {
     width: 35px; 
     height: auto;
     margin: 5px; 
+  }
+
+  .image-label {
+    font-size: 14px;
   }
 
 
